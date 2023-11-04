@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    {% include 'driving_app/common/commoncss.html' %}
+    <style>
+        li{
+          color:brown !important;
+        font-size: 20px;
+     
+        }
+       
+        .list-group-item{
+  
+          background-color: rgba(207, 244, 166, 0.911)!important;
+        }
+        .card{
+        display: flex; margin-left: auto;margin-right: auto;margin-top: 20px;
+      }
+    </style>
+  
+</head>
+<body style="background-color: #a6c7f5;">
+    {% include 'driving_app/trainee/trainee_header.html' %}
+   
+     <form method="POST" action="/editprofile_trainee/">
+      {% csrf_token %}
+
+    <div class="card" style="width: 30rem;">
+      <div class="card-header" style="text-align: center; font-size: 40px;font-weight: 4px;background-color: rgb(94,136,212);">
+        Edit Your Profile Details
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">  Your Name:{{trainee_data.name}}</li>
+
+           <li>  Your Email:
+          <input type="email" name="email" required class="form-control"  value="{{trainee_data.email}}">
+          </li>
+          <li>Your Phone:
+
+            <input type="text" name="phone" required class="form-control"  value="{{trainee_data.phone}}">
+          </li>
+          <li >Your Address:
+
+            <textarea name="address" rows="5" cols="80" required class="form-control">
+
+              {{trainer_data.address}}
+
+            </textarea>
+          </li>
+          <li> Your City Name:
+            <input type="text" name="city" required class="form-control"  value="{{trainee_data.cityname}}">
+          </li>
+        </ul>
+
+       <button type="submit" class="btn btn-primary">Save</button>
+
+
+
+      </div>
+
+     </form>
+
+
+
+    {% include 'driving_app/html/footer.html' %}
+    
+
+    {% include 'driving_app/common/commonjs.html' %}
+
+
+
+    
+</body>
+</html>

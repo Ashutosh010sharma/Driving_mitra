@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Trainers</title>
+    {% include 'driving_app/common/commoncss.html' %}
+</head>
+<body>
+    {% include 'driving_app/html/header.html' %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+            <th scope="col">Experience</th>
+            <th scope="col">Trainer Photo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for t in trainer_data%}
+          <tr>
+            <th scope="row">{{t.name}}
+
+            </th>
+            <th>
+                {{t.email}}
+            </th>
+            <th>
+                {{t.phone}}
+            </th>
+            <th>
+                {{t.age}}
+            </th>
+            <th>
+                {{t.cityname}}
+            </th>
+            <th>
+                {{t.experience}}
+            </th>
+            <th>
+                <img src='/media/{{t.trainerpic}}' style='width:100px;height:100px'>
+            </th>
+
+          </tr>
+
+
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+
+
+    
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+    
+</body>
+</html>

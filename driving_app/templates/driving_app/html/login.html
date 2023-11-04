@@ -1,0 +1,42 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% include 'driving_app/common/commoncss.html' %}
+</head>
+
+
+<body>
+    {% include 'driving_app/html/header.html' %}
+
+
+<h2 style="text-align: center;">    </h2>
+
+<form>
+    <div class="container w-50">
+    <div class="mb-3">
+      <label for="userid" class="form-label">Enter Your Id</label>
+      <input type="text" class="form-control" id="usereid"  name="usereid" placeholder="enter id here ">
+      
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label"> Enter your Password</label>
+      <input type="password" class="form-control" id="userpass" name="userpass" placeholder="enter passwoedrd here ">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+  </form>
+
+
+
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+    
+</body>
+</html> {% endcomment %}

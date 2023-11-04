@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assigned Trainer</title>
+    {% include 'driving_app/common/commoncss.html'%}
+
+    <style>
+        .card{
+            display: flex; margin-left: auto;margin-right: auto;margin-top: 20px;border-color: rgba(0, 94, 255, 0.682); border-width: 2px; margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #a6c7f5;">
+       {% include 'driving_app/trainee/trainee_header.html' %}
+
+    <div class="card" style="width: 25rem;">
+        <img class="card-img-top" src="/media/{{trainee_data.trainer.trainerpic}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Name:
+            {{trainee_data.trainer.name}}
+         
+
+        </p>
+        <p class="card-text">Email:
+            {{trainee_data.trainer.email}}
+         
+
+        </p>
+        <p class="card-text">Phone:
+            {{trainee_data.trainer.phone}}
+         
+
+        </p>
+        <p class="card-text">Experience:
+            {{trainee_data.trainer.experience}}
+         
+
+        </p>
+        <p class="card-text">Other details:
+            {{trainee_data.trainer.otherdetails}}
+         
+
+        </p>
+        </div>
+      </div>
+
+      {% include 'driving_app/html/footer.html' %}
+
+      {% include 'driving_app/common/commonjs.html' %}
+    
+</body>
+</html>

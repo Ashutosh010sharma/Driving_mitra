@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainee Performance</title>
+    {% include 'driving_app/common/commoncss.html'%} 
+</head>
+<body style="background-color: #a6c7f5">
+  
+    {% include 'driving_app/trainer/trainer_header.html' %}
+    
+       
+        <div class="d-flex justify-content-center" style="margin-top: 50px;">
+           
+            <div class="card mt-5 col-md-5" >
+
+                <div class="card-header" style="background-color:rgb(94,136,212) ;" >
+                    <p class="animate-charcter" style="font-size: 40px;text-align: center;"><b>Trainee Performance</b></p>
+                    </div>
+
+
+
+                 <form method="post" action="/trainee_performance/" novalidate class='needs-validation'>
+
+                    {% csrf_token %}
+                  
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Select</th>
+                            <!-- <th scope="col">name</th> -->
+                            <th scope="col">start point</th>
+                            <th scope="col">end point</th>
+                            <th scope="col">start time</th>
+                            <th scope="col">Performance</th>
+                            <th scope="col">Name</th>
+                          </tr>
+                        </thead>
+                         <tbody>
+                          <div class="form-check bg-primary">
+                            {% for r in ride_details%}
+                            <tr>
+                            <th><input type="radio" name="rideid" value="{{r.id}}" required style="color:red">
+                            </th>
+                           
+                            <th>{{ r.start_point}} </th>
+                            <th>{{ r.end_point}} </th>
+                          
+                            <th>{{ r.start_time}} </th>
+                            <th>{{ r.performance}} </th>
+                         
+                            </tr>
+
+
+ {%endfor%} 
+</div>
+</tbody>
+</table>
+ <div class="invalid-feedback">
+  Please select radio
+</div>
+<div class="container bg-success">
+ <textarea  type="text" name="tp" id="tp" placeholder="Enter Trainee's Performance " required class="form-control"> </textarea>
+        
+ <div class="invalid-feedback">
+  Please write performance
+</div>
+ 
+
+
+</div>
+
+    
+
+    
+   
+
+
+          
+<button type="submit" class="btn btn-primary" style="margin-left: 225px; background-color:rgb(94,136,212) ; width: 150px; margin-right: 10000px;">Submit</button>
+
+
+
+
+    
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+    <script src="{% static 'driving_app/javascript/validation.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivingMitra|Home</title>
+    <style>
+
+
+
+.section{
+  text-align: center;
+  padding-top: 40px;
+  background-color: rgb(249, 248, 247);
+  min-height: 30vh;
+  height: 100%;
+
+}
+      /* Add your custom CSS styles here */
+    /* Example styles for reference */
+/* 
+    .carousel-inner{
+      height: 400px;
+      width: 100%;
+    }
+    .carousel-item{
+      width: 66%;
+ 
+  margin-right: 10px;
+  border-radius: 5px;
+    }
+    .carousel-cell img{
+  max-width: 100%;
+}
+   */
+   .w-100{
+    width: 100%;
+    height: 75vh;
+   } 
+   
+    
+    /* Card Container */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+    
+    /* Card */
+    .card {
+      width: 300px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+    }
+
+ /*css of offers*/
+
+
+
+
+    .division {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 300px;
+            margin-bottom: px;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+            
+        }
+        .image {
+            width: 50%;
+            max-height: 300px;
+            margin-right: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .division:hover img {
+      transform: scale(1.1);
+    }
+        .description {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #b8c8de;
+            position: relative;
+        }
+           
+           
+        
+        .button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #36698c;
+    color: rgb(224, 213, 213);
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute; /* Added position: absolute */
+    bottom: 20px; /* Adjust bottom position */
+    right: 10px; /* Adjust right position */
+    margin-right: 20px;
+  }
+        .button:hover {
+            background-color: #0d486a;}
+        .description p {
+            margin: 20px;
+            font-size: 24px;
+            line-height: 1.4;
+            padding-right: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .division {
+                flex-direction: column;
+            }
+            .image {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .description {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .division {
+                flex-direction: column;
+            }
+            .image {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .description {
+                width: 100%;
+                order: 2;
+            }
+        }
+        
+        .reverse-division {
+            flex-direction: row-reverse;
+        }
+        
+        .reverse-division .image {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+        
+        .reverse-division .description {
+            order: 1;
+        }
+
+
+/* css of marquee */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ticker {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+}
+.offer {
+  width: 76%;
+  background: #3960bb;
+  padding: 0 2%;
+}
+.title {
+  width: 20%;
+  text-align: center;
+  background: #3470b5;
+  position: relative;
+}
+.title:after {
+  position: absolute;
+  content: "";
+  right: -22%;
+  border-left: 20px solid #0a435d;
+  border-top: 28px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 21px solid transparent;
+  top: 0px;
+}
+.title h5 {
+  font-size: 18px;
+  margin: 8% 0;
+}
+.offer marquee {
+  font-size: 18px;
+  margin-top: 12px;
+}
+.offer-content p {
+  margin-right: 41px;
+  display: inline;
+}
+
+/* our founder css */
+
+
+
+.fcontainer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .founders-fcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 250px;
+    }
+    
+    .founder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 250px;
+    }
+    
+    .founder-image {
+      margin-bottom: 10px;
+    }
+    
+    .founder-image img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    .founder-info {
+      margin-top: auto;
+      width: 400px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    
+    /* Responsive Styles */
+    
+    @media screen and (max-width: 600px) {
+      .founders-fcontainer {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .founder {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    </style>
+
+
+
+    {% include 'driving_app/common/commoncss.html' %}
+</head>
+<body>
+  {% include 'driving_app/html/header.html' %}
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'driving_app/images/start.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'driving_app/images/threestep.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'driving_app/images/step1.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'driving_app/images/step2.png'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'driving_app/images/safety.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  
+
+<!-- our spacification -->
+<section class="section" style="background-color: rgb(98, 90, 109);">
+
+  <h1><span style="text-align: center;background:linear-gradient(to bottom, #3c8581, #579fe7);
+    padding: 10px 55px;border-radius: 20px;color: rgb(0, 0, 0); font-size: 50px;">Our Spacifications</span></h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="{% static 'driving_app/images/classroom.webp'%}" alt="Card Image 1">
+      <h3>Classroom Instruction</h3>
+      <p> Most driving school programs begin with classroom instruction. In these sessions, you will learn about traffic laws, road signs, defensive driving techniques, and other essential information related to driving. The classroom sessions are typically conducted by experienced instructors who will provide you with the necessary knowledge to become a safe and responsible driver.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'driving_app/images/driving.webp'%}" alt="Card Image 2">
+      <h3>Practical Driving Lessons:</h3>
+      <p> After completing the classroom instruction, you will progress to practical driving lessons. These lessons are conducted in a dual-controlled vehicle with a qualified driving instructor. During the practical lessons, you will learn various driving skills such as starting, stopping, turning, lane changing, parking, and merging into traffic. The instructor will guide you through each step and provide feedback on your driving performance.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'driving_app/images/simulation.webp'%}" alt="Card Image 3">
+      <h3>Simulation Training:</h3>
+      <p> Some driving schools offer simulation training, which allows you to practice driving scenarios in a virtual environment. This can be beneficial for learners to gain experience in different road conditions, adverse weather, and challenging situations without the risks associated with real-life driving.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'driving_app/images/defenivedrive.gif'%}" alt="Card Image 4">
+      <h3>Defensive Driving Techniques:</h3>
+      <p>Defensive Driving Techniques: A significant focus of driving school programs is teaching defensive driving techniques. These techniques emphasize awareness, anticipation, and proactive measures to prevent accidents and respond effectively to potential hazards on the road.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'driving_app/images/rule.jpg'%}" alt="Card Image 5">
+      <h3>Rules of the Road:</h3>
+      <p> Driving school programs cover the local traffic laws and regulations specific to your area. This includes information about speed limits, right-of-way rules, parking regulations, and other legal requirements that drivers must follow.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'driving_app/images/test.avif'%}" alt="Card Image 6">
+      <h3>Practice Tests:</h3>
+      <p>To prepare you for the written driving test required to obtain a driver's license, driving school programs often include practice tests. These tests help you familiarize yourself with the format of the actual exam and assess your knowledge of traffic rules and road signs.</p>
+    </div>
+  </div>
+
+</section>
+
+  
+ <!-- program details -->
+  <section class="section">
+ <h1><span style="text-align: center;background:linear-gradient(to bottom, #3c8581, #579fe7);
+  padding: 10px 55px;border-radius: 20px;color: rgb(0, 0, 0); font-size: 50px;">Program Details</span></h1>
+
+
+<div style="margin-top: 20px; margin-bottom: 20px;">
+  <div class="division">
+    <img class="image" src="{% static 'driving_app/images/img1.jpg'%}" alt="Image 1">
+    <div class="description">
+        <p><h5>HEADING 1</h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In cum dolor et eum velit sequi sint libero unde corrupti nesciunt, repudiandae iusto facilis maiores sed consequatur ab impedit, voluptas ullam, vitae suscipit culpa ipsum porro qui. Eaque totam iusto repellat id, a, aperiam, minus cumque asperiores reprehenderit at velit aut.</p>
+        <div style="margin-left: 80%; margin-bottom: 10px;"><a href="{{'/our_programs/'}}"class="button">Submit</a></div>
+    </div>
+</div>
+
+<div class="division reverse-division">
+    <div class="description">
+        <p><h5>HEADING 2</h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita modi rem doloremque vero quisquam eaque, voluptatum neque fugiat iusto veritatis quaerat sunt enim ipsum excepturi officia a eum. Atque porro veritatis dolore rem repudiandae corrupti quibusdam labore aliquam quasi, ab incidunt! Eius doloribus architecto harum! Rem corrupti assumenda aliquam.</p>
+        <div style="margin-left: 80%; margin-bottom: 60%;" ><a href="#" class="button">Submit</a></div>
+        
+    </div>
+    <img class="image" src="{% static 'driving_app/images/img2.jpg'%}" alt="Image 2">
+</div>
+
+<div class="division">
+    <img class="image" src="{% static 'driving_app/images/img3.jpg'%}" alt="Image 3">
+    <div class="description">
+        <p><h5>HEADING 3</h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque maxime quasi, in repellendus nemo aliquam quod nulla, delectus laborum beatae quae eaque voluptas assumenda nobis excepturi exercitationem quis ipsa aperiam autem nam quo iusto omnis voluptatibus. Quam voluptatibus asperiores quas possimus neque! Ea soluta odio suscipit eaque beatae nulla.
+        </p>
+        <div style="margin-left: 80%; margin-bottom: 10px;" ><a href="#" class="button">Submit</a></div>
+        
+    </div>
+</div>
+
+<div class="division reverse-division">
+    <div class="description">
+        <p><h5>HEADING 4</h5>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque officia hic. Id earum nemo eveniet? Fugit dolorem quis, corrupti sunt soluta ea, unde aliquid quaerat voluptatem enim repudiandae, veritatis ullam ad fugiat incidunt impedit rem officia harum corporis voluptatibus ut porro earum commodi at! Excepturi unde soluta pariatur dolores?</p>
+        <div style="margin-left: 80%; margin-bottom: 10px;" ><a href="#" class="button">Submit</a></div>
+        
+    </div>
+    <img class="image" src="{% static 'driving_app/images/img4.jpg'%}" alt="Image 4">
+</div>
+
+<div class="division">
+    <img class="image" src="{% static 'driving_app/images/img5.jpg'%}" alt="Image 5">
+    <div class="description">
+        <p><h5>HEADING 5</h5>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, voluptatem. Aliquid natus repudiandae, expedita officia facere dicta dolorum veniam blanditiis aspernatur earum dolores cupiditate! Consequuntur labore fugiat dolore veniam quaerat? Ipsam fuga delectus nostrum, distinctio ab saepe laborum modi expedita fugit incidunt in, repellendus quisquam non dolorem id soluta? Recusandae.</p>
+        <div style="margin-left: 80%; margin-bottom: 10px;" ><a href="#" class="button">Submit</a></div>
+        
+    </div>
+</div>
+</div>
+</section>
+
+
+
+<section class="section" style=" background-color: rgb(47, 54, 55); width: 100%;">
+<!-- marquee -->
+
+<div class="container" style="margin-top: 30px; max-width: 100%;;">
+  <div class="ticker">
+    <div class="title">
+      <h5>Offers:</h5>
+    </div>
+    <div class="offer">
+      <marquee class="offer-content" onmouseover='this.stop() ' onmouseout='this.start()'>
+        {%for offer_obj in offer_key%}
+        <p>{{offer_obj.contents}}</p>
+        {%endfor%}
+        
+        
+      </marquee>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<!-- our founders -->
+<section class="section" >
+
+<h1><span style="text-align: center;background:linear-gradient(to bottom, #3c8581, #579fe7);
+padding: 10px 55px;border-radius: 20px;color: rgb(0, 0, 0); font-size: 50px;">Our Founders</span></h1>
+
+  
+    <div class="fcontainer">
+     
+      <div class="founders-fcontainer">
+        
+        
+        <div class="founder">
+          <div class="founder-image">
+            <img src="{% static 'driving_app/images/pro1.avif'%}" alt="Founder 2">
+          </div>
+          <div class="founder-info">
+            <h2>Ashutosh Sharma</h2>
+            <p style="font-size: 20px;">Role: [Founder's Role]</p>
+            <p>Bio: [A brief biography highlighting the founder's background, expertise, and achievements]</p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="fcontainer">
+      <div class="founders-fcontainer">
+        
+        
+        <div class="founder">
+          <div class="founder-image">
+            <img src="{% static 'driving_app/images/pro2.avif'%}" alt="Founder 2">
+          </div>
+          <div class="founder-info">
+            <h2>Ashutosh Sharma</h2>
+            <p style="font-size: 20px;">Role: [Founder's Role]</p>
+            <p>Bio: [A brief biography highlighting the founder's background, expertise, and achievements]</p>
+          </div>
+        </div>
+  
+  
+        <div class="founder">
+          <div class="founder-image">
+            <img src="{% static 'driving_app/images/pro3.avif'%}" alt="Founder 2">
+          </div>
+          <div class="founder-info">
+            <h2>Ashutosh Sharma</h2>
+            <p style="font-size: 20px;">Role: [Founder's Role]</p>
+            <p>Bio: [A brief biography highlighting the founder's background, expertise, and achievements]</p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+</body>
+</html>
+
+
+
+
+{% comment %} 
+admin=dell
+password=123
+email=dell@gmail.com 
+{% endcomment %}

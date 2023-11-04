@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs</title>
+    {% include 'driving_app/common/commoncss.html' %}
+    <style>
+.r:hover {
+      background-color: #296fcc;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+
+  /* Button Styles */
+ 
+</style>
+</head>
+<body style="background-color: #a6c7f5;">
+    {% include 'driving_app/html/header.html' %}
+
+
+
+    <h3 style="margin-left: 550px; margin-top: 30px; font-family: Arial, Helvetica, sans-serif; text-decoration: solid; font-size: 40px;"><strong>Our Programs Details</strong></h3>
+    <table class="table" style="margin-top: 40px;">
+        <thead >
+          <tr>
+            <th scope="col">Program Name</th>
+            <th scope="col">Charges</th>
+            <th scope="col">Description</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+            {%for s in program_data%}
+  <tr class="r">
+<td scope="row">
+
+{{s.program_name}}
+
+</td>
+<td>
+    {{s.charges}}
+
+</td>
+
+<td>
+    {{s.description}}
+
+</td>
+
+  </tr>
+
+
+{%endfor%}
+        </tbody>
+      </table>
+
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="card mb-3" style="max-width: 600px; height: 245px; margin-left: 477px; border-radius: 10px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'driving_app/images/paymentphoto.avif'%}" class="img-fluid rounded-start" alt="..." style="height: 241px; border-radius: 10px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="color:rgb(190, 190, 120); background-color: rgb(60, 56, 56); border-radius: 10px; height: 245px;">
+              <h5 class="card-title">Payment Details:</h5>
+            
+              <p class="card-text"> A/C Name: DrivingMitra Private Limited
+                <br>A/C No: 3244572839
+                <br>Bank Name:Axis Bank 
+                <br>Branch: Aliganj, Lucknow
+                <br>IFSC: AABK0005891
+                <br> A/C Type: Current Account
+                <br> Bank Address:40, Chandralok, Aliganj, Lucknow
+              </p>
+             
+             
+              </div>
+          </div>
+        </div>        
+      </div>
+      
+      
+      
+      <button class="btn  " style="margin-left: 625px; "><a href="{{'/admission/'}}" style="color:rgb(27, 25, 25) ; font-size: 25px; text-decoration: none;">After Payment Click Here</a></button>
+      
+<br>
+<br>
+<br>
+<br>
+   
+
+    {% include 'driving_app/common/commonjs.html' %}
+    {% include 'driving_app/html/footer.html' %}
+</body>
+</html>

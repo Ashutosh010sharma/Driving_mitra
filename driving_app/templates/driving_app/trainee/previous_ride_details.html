@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Ride Details</title>
+    {% include 'driving_app/common/commoncss.html'%}
+</head>
+<body>
+    {% include 'driving_app/trainee/trainee_header.html' %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Start Point</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Trainer</th>
+            <th scope="col">Time</th>
+            <th scope="col">Date</th>
+            <th scope="col">Performance</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {%for t in trainee_data%}
+          <tr>
+            <th>
+                {{t.start_point}}
+            </th>
+            <th>
+                {{t.destination}}
+            </th>
+            <th>
+                {{t.trainer}}
+            </th>
+            <th>
+                {{t.start_time}}
+            </th>
+            <th>
+                {{t.date}}
+            </th>
+            <th>
+                {{t.performance}}
+            </th>
+            
+
+          </tr>
+
+
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+
+
+    
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+</body>
+</html>

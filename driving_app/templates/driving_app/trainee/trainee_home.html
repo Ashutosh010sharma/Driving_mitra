@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainee Home</title>
+    {% include 'driving_app/common/commoncss.html'%}
+    <style>
+      .card{
+        display:flex;
+        margin: auto;
+        width: 40rem;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1.5px rgb(37, 91, 132) solid;
+      }
+      .list-group-item{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+      }
+    
+    </style>
+    
+</head>
+<body style="background-color: #a6c7f5;">
+  {% include 'driving_app/trainee/trainee_header.html' %}
+  
+  <h1 style=" text-align: center; margin: auto; padding-top: 20px;">Trainee Home Page</h1>
+
+
+  <div class="card"style= " margin-left: 400px;margin-right:400px; margin-bottom:40px ;margin-top:40px ; background-color: rgb(94,136,212); display: flex;">
+      <div class="card-header" style="font-size: 30px;" >
+        Your Profile Details👨
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Your Name:{{trainee_data.name}}</li>
+        <li class="list-group-item">Your Phone No. :{{trainee_data.phone}}</li>
+        <li class="list-group-item">A third item</li>
+      </ul>
+    </div>
+
+{% include 'driving_app/html/footer.html' %}
+    
+
+{% include 'driving_app/common/commonjs.html' %}
+
+</body>
+</html>

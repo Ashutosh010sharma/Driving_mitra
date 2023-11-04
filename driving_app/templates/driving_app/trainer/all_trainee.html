@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Trainee of Trainer</title>
+    {% include 'driving_app/common/commoncss.html'%}
+</head>
+<body>
+    {% include 'driving_app/trainer/trainer_header.html' %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Enrolled in program</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {%for t in trainee_data%}
+          <tr>
+            <th scope="row">{{t.name}}
+
+            </th>
+            <th>
+                {{t.email}}
+            </th>
+            <th>
+                {{t.phone}}
+            </th>
+            <th>
+                {{t.address}}
+            </th>
+            <th>
+                {{t.program}}
+            </th>
+            
+
+          </tr>
+
+
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+
+
+    
+    {% include 'driving_app/html/footer.html' %}
+
+    {% include 'driving_app/common/commonjs.html' %}
+    
+    
+</body>
+</html>
